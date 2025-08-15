@@ -1,7 +1,7 @@
 ## 安装
 
-- Greasyfork：https://greasyfork.org/zh-CN/scripts/xxxxxx
-- Greasyfork镜像：https://gfork.zh-tw.eu.org/zh-hans/scripts/xxxxxx
+- Greasyfork：https://greasyfork.org/zh-CN/scripts/545959
+- Greasyfork镜像：https://gfork.zh-tw.eu.org/zh-hans/scripts/545959
 - Github：https://github.com/Jayvin-Leung/Bilibili-Search-Filter/releases
 - Gitee：https://gitee.com/Jayvin_Leung/Bilibili-Search-Filter/releases
 
@@ -17,7 +17,7 @@
 
 ## 使用说明
 
-详情请查看：https://www.bilibili.com/video/xxxxxx
+详情请查看：https://www.bilibili.com/video/BV1usbpziEVS
 
 ## 兼容性
 
