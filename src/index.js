@@ -15,7 +15,7 @@ const params = ref({
   searchType: 'video',
   tids: 0,
   pn: 1,
-  ps: 42,
+  ps: 36,
 });
 const total = ref(0);
 const list = ref([]);
@@ -32,12 +32,7 @@ const search = () => {
 
   showLoading();
   typeApi({ ...params.value }, (result) => {
-    total.value =
-      result.numResults != 1000
-        ? result.numResults
-        : params.value.tids > 0
-        ? result.numResults
-        : 1176;
+    total.value = result.numResults;
     list.value = result.result;
     hideLoading();
   });

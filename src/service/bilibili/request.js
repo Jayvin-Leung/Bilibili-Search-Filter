@@ -23,13 +23,18 @@ const request = async (url, option, success, failure) => {
 };
 
 const getWbiKeys = async () => {
-  const res = await request('https://api.bilibili.com/x/web-interface/nav', {
-    method: 'GET',
-    credentials: 'include',
-    mode: 'cors',
-  });
-  const img_url = res.wbi_img.img_url;
-  const sub_url = res.wbi_img.sub_url;
+  let img_url = localStorage.wbi_img_url;
+  let sub_url = localStorage.wbi_sub_url;
+
+  if (!img_url || !sub_url) {
+    const res = await request('https://api.bilibili.com/x/web-interface/nav', {
+      method: 'GET',
+      credentials: 'include',
+      mode: 'cors',
+    });
+    img_url = res.wbi_img.img_url;
+    sub_url = res.wbi_img.sub_url;
+  }
 
   return {
     img_key: img_url.slice(img_url.lastIndexOf('/') + 1, img_url.lastIndexOf('.')),
